@@ -1,0 +1,9 @@
+[aws]
+localhost root_pass=root app_pass=app
+
+[azure]
+localhost root_pass=root app_pass=app
+
+[googlecloud]
+localhost root_pass=root app_pass=app
+

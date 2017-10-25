@@ -8,3 +8,7 @@
 
   - debug: 
       msg: "System {{ inventory_hostname }}"
+
+  - file:
+      path: /tmp/morpheusdidit.txt
+      state: touch
