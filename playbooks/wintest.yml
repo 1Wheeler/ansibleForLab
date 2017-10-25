@@ -3,8 +3,8 @@
   become: false
   gather_facts: false
   tasks:
-  - name: create a file
-    win_file:
-      path: C:\MGS_Download\foo.txt
-      state: touch
+    - name: create a file
+      win_file:
+        path: C:\MGS_Download\foo.txt
+        state: touch
 ...
