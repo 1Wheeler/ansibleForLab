@@ -3,12 +3,6 @@
   become: false
   gather_facts: false
  
-  vars:
-    ansible_port: 5985
-    ansible_connection: winrm
-    ansible_winrm_transport: ntlm
-    ansible_winrm_server_cert_validation: ignore
- 
   tasks:
     - name: create a directory
       win_file:
