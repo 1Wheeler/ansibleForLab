@@ -1,13 +1,20 @@
 ---
-- name: Touch a file
-  win_file:
-    path: C:\Temp\foo.conf
-    state: touch
-- name: create a directory
-  win_file: 
-    path: C:\MGS_Download\Temp"
-    state: directory    
-- name: create a file
-  win_file:
-    path: C:\MGS_Download\foo.txt
-    state: touch
+- hosts: all
+  become: false
+  gather_facts: false
+ 
+  vars:
+    ansible_port: 5985
+    ansible_connection: winrm
+    ansible_winrm_transport: ntlm
+    ansible_winrm_server_cert_validation: ignore
+ 
+  tasks:
+    - name: create a directory
+      win_file:
+        path: C:\MGS_Download\Temp
+        state: directory
+    - name: create a file
+      win_file:
+        path: C:\MGS_Download\foo.txt
+        state: touch
