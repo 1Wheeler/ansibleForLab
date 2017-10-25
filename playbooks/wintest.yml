@@ -1,8 +1,12 @@
 ---
-- name: create a directory
+- name: Touch a file
   win_file:
-    path: C:\MGS_Download\Temp
-    state: directory
+    path: C:\Temp\foo.conf
+    state: touch
+- name: create a directory
+  win_file: 
+    path: C:\MGS_Download\Temp"
+    state: directory    
 - name: create a file
   win_file:
     path: C:\MGS_Download\foo.txt
