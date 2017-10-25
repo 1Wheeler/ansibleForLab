@@ -2,8 +2,9 @@
 - hosts: all
   become: false
   gather_facts: false
- 
-- name: create a file
-  win_file:
-    path: C:\MGS_Download\foo.txt
-    state: touch
+  tasks:
+  - name: create a file
+    win_file:
+      path: C:\MGS_Download\foo.txt
+      state: touch
+...
